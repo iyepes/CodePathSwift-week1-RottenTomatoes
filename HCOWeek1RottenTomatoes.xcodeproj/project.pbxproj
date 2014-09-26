@@ -13,6 +13,7 @@
 		F85E4AF419D5DC9C00B9EE31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85E4AF319D5DC9C00B9EE31 /* Images.xcassets */; };
 		F85E4AF719D5DC9C00B9EE31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F85E4AF519D5DC9C00B9EE31 /* LaunchScreen.xib */; };
 		F85E4B0319D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B0219D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.swift */; };
+		F85E4B0D19D5E2E600B9EE31 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		F85E4AFC19D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HCOWeek1RottenTomatoesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85E4B0119D5DC9C00B9EE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F85E4B0219D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCOWeek1RottenTomatoesTests.swift; sourceTree = "<group>"; };
+		F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				F85E4AF319D5DC9C00B9EE31 /* Images.xcassets */,
 				F85E4AF519D5DC9C00B9EE31 /* LaunchScreen.xib */,
 				F85E4AEA19D5DC9C00B9EE31 /* Supporting Files */,
+				F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */,
 			);
 			path = HCOWeek1RottenTomatoes;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				F85E4AEF19D5DC9C00B9EE31 /* ViewController.swift in Sources */,
 				F85E4AED19D5DC9C00B9EE31 /* AppDelegate.swift in Sources */,
+				F85E4B0D19D5E2E600B9EE31 /* MoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HCOWeek1RottenTomatoes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HCOWeek1RottenTomatoes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
