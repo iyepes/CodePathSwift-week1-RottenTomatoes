@@ -13,6 +13,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     var movies: [NSDictionary] = []
     
+    @IBAction func onMovieTap(sender: AnyObject) {
+        performSegueWithIdentifier("loadDetails", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

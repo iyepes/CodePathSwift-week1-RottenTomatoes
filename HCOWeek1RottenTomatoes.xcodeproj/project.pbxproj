@@ -16,6 +16,7 @@
 		F85E4B0319D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B0219D5DC9C00B9EE31 /* HCOWeek1RottenTomatoesTests.swift */; };
 		F85E4B0D19D5E2E600B9EE31 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */; };
 		F85E4B0F19D601EF00B9EE31 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B0E19D601EF00B9EE31 /* MovieCell.swift */; };
+		F85E4B1419D67DA900B9EE31 /* movieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85E4B1319D67DA900B9EE31 /* movieDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		F85E4B0E19D601EF00B9EE31 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		F85E4B1019D6695100B9EE31 /* HCOWeek1RottenTomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HCOWeek1RottenTomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
+		F85E4B1319D67DA900B9EE31 /* movieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = movieDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,12 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				F85E4AEC19D5DC9C00B9EE31 /* AppDelegate.swift */,
-				F85E4AEE19D5DC9C00B9EE31 /* ViewController.swift */,
+				F85E4B1519D67DC800B9EE31 /* View Controllers */,
 				F85E4AF019D5DC9C00B9EE31 /* Main.storyboard */,
 				F85E4AF319D5DC9C00B9EE31 /* Images.xcassets */,
 				F85E4AF519D5DC9C00B9EE31 /* LaunchScreen.xib */,
 				F85E4AEA19D5DC9C00B9EE31 /* Supporting Files */,
-				F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */,
 				F85E4B0E19D601EF00B9EE31 /* MovieCell.swift */,
 				F85E4B1019D6695100B9EE31 /* HCOWeek1RottenTomatoes-Bridging-Header.h */,
 			);
@@ -142,6 +143,16 @@
 				F85E4B0119D5DC9C00B9EE31 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F85E4B1519D67DC800B9EE31 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F85E4AEE19D5DC9C00B9EE31 /* ViewController.swift */,
+				F85E4B0C19D5E2E600B9EE31 /* MoviesViewController.swift */,
+				F85E4B1319D67DA900B9EE31 /* movieDetailsViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F85E4AEF19D5DC9C00B9EE31 /* ViewController.swift in Sources */,
+				F85E4B1419D67DA900B9EE31 /* movieDetailsViewController.swift in Sources */,
 				F85E4AED19D5DC9C00B9EE31 /* AppDelegate.swift in Sources */,
 				F85E4B0F19D601EF00B9EE31 /* MovieCell.swift in Sources */,
 				F85E4B0D19D5E2E600B9EE31 /* MoviesViewController.swift in Sources */,
