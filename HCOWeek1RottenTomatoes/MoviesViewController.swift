@@ -8,10 +8,15 @@
 
 import UIKit
 
+var movies: [NSDictionary] = []
+
+
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableView: UITableView!
-    var movies: [NSDictionary] = []
+    //var movies: [NSDictionary] = []
     
     @IBAction func onMovieTap(sender: AnyObject) {
         performSegueWithIdentifier("loadDetails", sender: self)
@@ -27,11 +32,27 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         var request = NSURLRequest(URL: NSURL(string: url))
         
+        activityIndicator.startAnimating()
+        
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!,data: NSData!, error: NSError!) -> Void in
         var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
-        self.movies = object["movies"] as [NSDictionary]
+        //self.movies = object["movies"] as [NSDictionary]
+        movies = object["movies"] as [NSDictionary]
         //println("object \(object)")
         self.tableView.reloadData()
+            
+            //Save downloaded info
+            var documentsDirectory:String?
+            var paths:[AnyObject] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true);
+            if paths.count > 0 {
+                if let pathString = paths[0] as? NSString {
+                    documentsDirectory = pathString
+                }
+            }
+            documentsDirectory = documentsDirectory! + "/downloaded.data"
+            var applicationDocumentsDirectory = NSURL.URLWithString(documentsDirectory!)
+
+            
         }
         
     }
@@ -39,6 +60,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if segue.identifier == "loadDetails" {
+            var row = self.tableView.indexPathForSelectedRow()?.row
+            var detail = segue.destinationViewController as movieDetailsViewController
+            
+            
+            // println("Seque to \(detail.title), setting index to \(row)")//     
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

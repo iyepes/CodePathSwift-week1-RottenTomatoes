@@ -3,3 +3,5 @@
 //
 
 #import "UIImageView+AFNetworking.h"
+#import "UIActivityIndicatorView+AFNetworking.h"
+#import "AFImageDownloader.h"

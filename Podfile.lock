@@ -1,4 +1,6 @@
 PODS:
+  - AFImageDownloader (1.0.0):
+    - Kiwi (~> 1.1.1)
   - AFNetworking (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
@@ -20,14 +22,15 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - M13ProgressSuite (1.2.5)
+  - Kiwi (1.1.1)
 
 DEPENDENCIES:
+  - AFImageDownloader
   - AFNetworking
-  - M13ProgressSuite (~> 1.2.3)
 
 SPEC CHECKSUMS:
+  AFImageDownloader: 2af9e2e7820cc43eb68712012778d89fdde3a24b
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
-  M13ProgressSuite: bf63f5592f1e40767da5203199804ad5eed3eb48
+  Kiwi: e5158ea79f32bae42ec0750ac6f7ec122bc1eebc
 
 COCOAPODS: 0.34.1

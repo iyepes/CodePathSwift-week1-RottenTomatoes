@@ -3,6 +3,6 @@ platform :ios, '8.0'
 workspace 'HCOWeek1RottenTomatoes'
 
 pod 'AFNetworking'
-pod 'M13ProgressSuite', '~> 1.2.3'
-
+#pod 'M13ProgressSuite', '~> 1.2.3'
+pod 'AFImageDownloader'
 	

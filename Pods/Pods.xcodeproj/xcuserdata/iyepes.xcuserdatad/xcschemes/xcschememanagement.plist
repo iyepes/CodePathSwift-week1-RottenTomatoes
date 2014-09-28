@@ -4,12 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFImageDownloader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-M13ProgressSuite.xcscheme</key>
+		<key>Pods-Kiwi.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>29C378AF8720927D475293F6</key>
+		<key>0029222043A44EB4E8AD84AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>752A189D8DA790252BA14D39</key>
+		<key>11C3AE5AB2ACF6A6CF0BDCC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A69B100B3EE2B4A813C0AFE2</key>
+		<key>FC1EEC84413A202D39CE018A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFBE7CC83D5DF99B5A58B8A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
