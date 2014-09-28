@@ -24,6 +24,8 @@ class movieDetailsViewController: UIViewController {
     
     @IBOutlet weak var movieSynopsis: UILabel!
     
+    @IBOutlet weak var posterImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -31,9 +33,22 @@ class movieDetailsViewController: UIViewController {
         
         var movie = movies[rowIndex!]
         self.movieTitle.text = movie["title"] as? String
-        self.movieyear.text = movie["year"] as? String
+        var year = movie["year"] as Int
+        self.movieyear.text = String(year)
         self.movieSynopsis.text = movie["synopsis"] as? String
         
+        var ratings = movie["ratings"] as NSDictionary
+        var critics_score = ratings["critics_score"] as Int
+        self.movieCriticsScore.text = String(critics_score)
+        var audience_score = ratings["audience_score"] as Int
+        self.movieAudienceScore.text = String(audience_score)
+        
+        var posters = movie["posters"] as NSDictionary
+        var posterURL = posters["thumbnail"] as String
+        self.posterImage.setImageWithURL(NSURL(string: posterURL))
+        
+        var newString = posterURL.stringByReplacingOccurrencesOfString("_tmb.", withString: "_org.", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        self.posterImage.setImageWithURL(NSURL(string: newString))
     }
 
     override func didReceiveMemoryWarning() {

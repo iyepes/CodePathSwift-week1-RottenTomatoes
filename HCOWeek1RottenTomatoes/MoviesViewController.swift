@@ -34,17 +34,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         //println("object \(object)")
         self.movieTableView.reloadData()
             
-            /*//Save downloaded info
-            var documentsDirectory:String?
-            var paths:[AnyObject] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true);
-            if paths.count > 0 {
-                if let pathString = paths[0] as? NSString {
-                    documentsDirectory = pathString
-                }
-            }
-            documentsDirectory = documentsDirectory! + "/downloaded.data"
-            var applicationDocumentsDirectory = NSURL.URLWithString(documentsDirectory!)*/
-            
         }
         
     }
@@ -52,11 +41,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        performSegueWithIdentifier("loadDetails", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
