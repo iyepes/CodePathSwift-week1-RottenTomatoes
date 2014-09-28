@@ -9,39 +9,32 @@
 import UIKit
 
 var movies: [NSDictionary] = []
+var rowIndex : Int? = nil
 
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var movieTableView: UITableView!
     //var movies: [NSDictionary] = []
-    
-    @IBAction func onMovieTap(sender: AnyObject) {
-        performSegueWithIdentifier("loadDetails", sender: self)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        movieTableView.delegate = self
+        movieTableView.dataSource = self
         
         var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=zs244f7v8xdzm6unwf8m97xy&limit=20&country=us"
         
         var request = NSURLRequest(URL: NSURL(string: url))
-        
-        activityIndicator.startAnimating()
         
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!,data: NSData!, error: NSError!) -> Void in
         var object = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as NSDictionary
         //self.movies = object["movies"] as [NSDictionary]
         movies = object["movies"] as [NSDictionary]
         //println("object \(object)")
-        self.tableView.reloadData()
+        self.movieTableView.reloadData()
             
-            //Save downloaded info
+            /*//Save downloaded info
             var documentsDirectory:String?
             var paths:[AnyObject] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true);
             if paths.count > 0 {
@@ -50,23 +43,28 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 }
             }
             documentsDirectory = documentsDirectory! + "/downloaded.data"
-            var applicationDocumentsDirectory = NSURL.URLWithString(documentsDirectory!)
-
+            var applicationDocumentsDirectory = NSURL.URLWithString(documentsDirectory!)*/
             
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("loadDetails", sender: self)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "loadDetails" {
-            var row = self.tableView.indexPathForSelectedRow()?.row
+            var row = self.movieTableView.indexPathForSelectedRow()?.row
+            var movie = movies[row!]
             var detail = segue.destinationViewController as movieDetailsViewController
-            
+            detail.rowIndex = row
             
             // println("Seque to \(detail.title), setting index to \(row)")//     
         }

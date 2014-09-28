@@ -16,10 +16,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="5Kl-Pw-SOk">
-                                    <rect key="frame" x="0.0" y="195" width="320" height="37"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="109" id="2oj-Q2-5gR" customClass="MovieCell" customModule="HCOWeek1RottenTomatoes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -53,7 +49,6 @@
                                             <outlet property="posterView" destination="alm-sR-ccB" id="0fj-Wf-KQB"/>
                                             <outlet property="synopsisLabel" destination="cUy-f2-hYB" id="PUi-ec-h9o"/>
                                             <outlet property="titleLabel" destination="9It-gw-kgs" id="KeV-ua-6lF"/>
-                                            <outletCollection property="gestureRecognizers" destination="au0-xF-bkb" appends="YES" id="lNy-Eh-qdH"/>
                                             <segue destination="nMf-Vk-wPz" kind="push" identifier="loadDetails" id="ecy-tO-e1r"/>
                                         </connections>
                                     </tableViewCell>
@@ -64,16 +59,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="0J4-bL-NV9"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="5Kl-Pw-SOk" id="tIA-bb-aa3"/>
-                        <outlet property="tableView" destination="aKD-2b-9Fh" id="Zlp-3H-iAB"/>
+                        <outlet property="movieTableView" destination="aKD-2b-9Fh" id="cW2-8m-xYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="au0-xF-bkb">
-                    <connections>
-                        <action selector="onMovieTap:" destination="vXZ-lx-hvc" id="nNL-q4-LgM"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="589" y="128"/>
         </scene>
@@ -149,6 +138,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="DdT-Eh-F5X"/>
+                    <connections>
+                        <outlet property="movieAudienceScore" destination="vhj-uX-7li" id="fHR-fH-8Tb"/>
+                        <outlet property="movieCriticsScore" destination="Qoh-vA-pKR" id="oR5-hT-m9P"/>
+                        <outlet property="movieRating" destination="j0i-Is-d2I" id="LHE-qA-plR"/>
+                        <outlet property="movieSynopsis" destination="SXS-Zd-aNl" id="g2g-cL-0g5"/>
+                        <outlet property="movieTitle" destination="zq4-ja-Oyf" id="sXR-WJ-s4K"/>
+                        <outlet property="movieyear" destination="Q8e-rf-QfD" id="eg8-4W-E8W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-mc-qKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

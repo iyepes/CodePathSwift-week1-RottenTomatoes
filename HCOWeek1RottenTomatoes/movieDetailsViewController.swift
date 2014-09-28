@@ -12,10 +12,28 @@ class movieDetailsViewController: UIViewController {
 
     var rowIndex : Int? = nil
     
+    @IBOutlet weak var movieTitle: UILabel!
+    
+    @IBOutlet weak var movieyear: UILabel!
+    
+    @IBOutlet weak var movieRating: UILabel!
+    
+    @IBOutlet weak var movieCriticsScore: UILabel!
+    
+    @IBOutlet weak var movieAudienceScore: UILabel!
+    
+    @IBOutlet weak var movieSynopsis: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         // Do any additional setup after loading the view.
+        
+        var movie = movies[rowIndex!]
+        self.movieTitle.text = movie["title"] as? String
+        self.movieyear.text = movie["year"] as? String
+        self.movieSynopsis.text = movie["synopsis"] as? String
+        
     }
 
     override func didReceiveMemoryWarning() {
