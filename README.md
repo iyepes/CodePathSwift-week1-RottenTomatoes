@@ -15,5 +15,5 @@ Incomplete: User sees loading state while waiting for movies API. You can use on
 
 Hours used: 24
 
-Notes: It's pretty frustrating not to find documentation with examples for simple tasks for beginners. My course partners helped a lot with hints and tutorials.
+Notes: My course partners helped a lot with hints and tutorials.
 
